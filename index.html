@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniCash Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>MiniCash</h1>
+    <div id="balance">💰 0 Coins</div>
+  </header>
+
+  <main>
+    <section id="tasks">
+      <h2>📋 Tugas</h2>
+      <p>Kerjakan tugas, dapatkan koin!</p>
+      <div class="task" onclick="completeTask(50)">✅ Lihat Iklan (50 Coins)</div>
+      <div class="task" onclick="completeTask(100)">📱 Install Aplikasi (100 Coins)</div>
+      <div class="task" onclick="completeTask(200)">🎯 Mainkan Game (200 Coins)</div>
+    </section>
+
+    <section id="withdraw">
+      <h2>💵 Withdraw</h2>
+      <input type="number" id="withdrawAmount" placeholder="Jumlah koin">
+      <select id="withdrawMethod">
+        <option value="Dana">Dana</option>
+        <option value="Gopay">Gopay</option>
+        <option value="Paypal">Paypal</option>
+      </select>
+      <button onclick="withdraw()">Tarik Dana</button>
+      <p class="note">Minimal penarikan: 1000 koin</p>
+    </section>
+
+    <section id="invite">
+      <h2>👥 Undang Teman</h2>
+      <p>Bagikan link ini untuk dapatkan 10% dari penghasilan temanmu!</p>
+      <input type="text" id="refLink" readonly>
+      <button onclick="copyRef()">Salin Link</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by Monetag</p>
+  </footer>
+
+  <!-- Monetag -->
+  <script src='//libtl.com/sdk.js' data-zone='9687311' data-sdk='show_9687311'></script>
+  <script src="script.js"></script>
+</body>
+</html>
